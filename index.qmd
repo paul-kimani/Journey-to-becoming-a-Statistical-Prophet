@@ -6,7 +6,7 @@ listing:
   sort: "date desc"
 ---
 
-## Greetings, Seeker of Patterns
+## Greetings, Seeker of Patterns😀😀
 
 In the vast chaos of data, lies the power to foresee. This site chronicles my odyssey from novice code-wrangler to oracle of odds—armed with R, simulations, and a healthy dose of humility. 
 

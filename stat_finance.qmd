@@ -1,0 +1,80 @@
+---
+title: "Statistical and Financial Simulations"
+format: html
+execute:
+  echo: true
+  warning: false
+---
+
+# Navigating the Statistical Cosmos
+
+Explore statistical and financial concepts with animated visualizations, styled for a cosmic theme.
+
+## 1. Basic Statistics: Uniform Distribution
+
+Simulate a uniform distribution with an animated histogram build-up.
+
+```{r}
+#| label: uniform-stats
+#| fig-cap: "Animated Histogram of Uniform Draws"
+
+library(ggplot2)
+library(gganimate)
+set.seed(123)
+n_draws <- 5000
+uniforms <- runif(n_draws, min = 0, max = 1)
+mean_uniform <- mean(uniforms)
+var_uniform <- var(uniforms)
+
+cat("Mean:", round(mean_uniform, 4), "(Expected: 0.5)\n")
+cat("Variance:", round(var_uniform, 4), "(Expected: 0.0833)\n")
+
+df <- data.frame(x = uniforms, frame = seq_along(uniforms))
+p <- ggplot(df, aes(x)) +
+  geom_histogram(bins = 50, fill = "#8b5cf6", alpha = 0.7, color = "white") +
+  labs(title = "Uniform Constellation: {frame} Draws",
+       x = "Value", y = "Frequency") +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "transparent", color = NA),
+    panel.background = element_rect(fill = "transparent", color = NA),
+    text = element_text(color = "#ffffff"),
+    axis.text = element_text(color = "#e2e8f0")
+  ) +
+  transition_manual(frame)
+
+animate(p, nframes = 100, fps = 10, width = 600, height = 400, bg = "transparent")
+
+```
+
+```{r}
+
+#| label: normal-stats
+#| fig-cap: "Animated Histogram of Normal Draws"
+
+set.seed(42)
+n_draws <- 10000
+normals <- rnorm(n_draws, mean = 0, sd = 1)
+mean_normal <- mean(normals)
+var_normal <- var(normals)
+
+cat("Mean:", round(mean_normal, 4), "(Expected: 0)\n")
+cat("Variance:", round(var_normal, 4), "(Expected: 1)\n")
+
+df <- data.frame(x = normals, frame = seq_along(normals))
+p <- ggplot(df, aes(x)) +
+  geom_histogram(bins = 50, fill = "#8b5cf6", alpha = 0.7, color = "white") +
+  labs(title = "Normal Nebula: {frame} Draws",
+       x = "Value", y = "Frequency") +
+  theme_minimal() +
+  theme(
+    plot.background = element_rect(fill = "transparent", color = NA),
+    panel.background = element_rect(fill = "transparent", color = NA),
+    text = element_text(color = "#ffffff"),
+    axis.text = element_text(color = "#e2e8f0")
+  ) +
+  transition_manual(frame)
+
+animate(p, nframes = 100, fps = 10, width = 600, height = 400, bg = "transparent")
+
+```
