@@ -1,68 +1,82 @@
-/* Universal tweaks: Site-wide font and color scheme */
+/* Modern, clean styling for an R-based Quarto site */
 body {
-  font-family: 'Georgia', 'Times New Roman', serif;  /* Serif for that ancient-scroll feel */
-  line-height: 1.7;  /* Breathing room for prophetic prose */
-  color: #2c3e50;  /* Dark slate for readability */
-  background-color: #f8f9fa;  /* Subtle off-white backdrop */
+  font-family: 'Roboto', 'Arial', sans-serif; /* Clean, modern sans-serif */
+  line-height: 1.6; /* Comfortable spacing */
+  color: #1f2a44; /* Dark navy for readability */
+  background-color: #ffffff; /* Crisp white background */
+  margin: 0;
+  padding: 20px;
 }
 
-/* Navbar enhancements: Make the stars shine */
+/* Navbar: Professional and sleek */
 .navbar {
-  background-color: #34495e;  /* Deep blue for cosmic navigation */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Gentle glow */
+  background-color: #0077b6; /* Vibrant blue for a techy feel */
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .navbar-brand {
-  font-weight: bold;
-  color: #ecf0f1 !important;  /* Ethereal white text */
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #ffffff !important; /* Bright white */
 }
 
-/* Code and R chunks: Highlight the incantations */
+/* Code blocks: Clean and readable */
 .sourceCode {
-  background-color: #ecf0f1;  /* Light gray altar */
-  border-left: 4px solid #3498db;  /* Blue edge for code divinity */
-  padding-left: 1em;
-  border-radius: 0 4px 4px 0;
+  background-color: #f5f7fa; /* Light gray, inspired by code editors */
+  border-left: 4px solid #0077b6; /* Matching blue accent */
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: 'Fira Mono', monospace; /* Monospace for code */
+  font-size: 0.9rem;
 }
 
 .code-output {
-  background-color: #f8f9fa;
-  border: 1px solid #bdc3c7;
-  padding: 0.5em;
+  background-color: #ffffff;
+  border: 1px solid #e0e4e8;
+  padding: 0.75rem;
+  border-radius: 4px;
 }
 
-/* Plots and tables: Polish the visions */
+/* Plots and tables: Polished and professional */
 img {
   max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);  /* Subtle oracle aura */
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Minimal shadow */
 }
 
 table {
   border-collapse: collapse;
-  margin: 1em 0;
+  width: 100%;
+  margin: 1.5rem 0;
+  background-color: #ffffff;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 0.5em;
+  border: 1px solid #e0e4e8;
+  padding: 0.8rem;
   text-align: left;
 }
 
 th {
-  background-color: #3498db;
-  color: white;
+  background-color: #0077b6; /* Consistent blue */
+  color: #ffffff;
+  font-weight: 500;
 }
 
-/* Footer flair: Date stamps with a mystic touch */
+/* Footer: Subtle and modern */
 small {
-  color: #7f8c8d;
-  font-style: italic;
+  color: #606c88;
+  font-size: 0.85rem;
 }
 
-/* Responsive magic: Scales for all seers */
+/* Responsive design: Mobile-friendly */
 @media (max-width: 768px) {
   body {
-    font-size: 1.1em;  /* Bigger text on mobiles */
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+  .navbar {
+    padding: 0.5rem;
   }
 }

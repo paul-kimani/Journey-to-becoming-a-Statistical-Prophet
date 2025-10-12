@@ -1,10 +1,10 @@
 project:
   type: website
-  output-dir: docs  # Outputs static files here for GitHub Pages
+  output-dir: docs
 
 website:
-  title: "Journey to becoming a Statistical Prophet"
-  search: true  # Adds site-wide search—great for finding R snippets
+  title: "Statistical Insights"
+  search: true
   navbar:
     left:
       - href: index.qmd
@@ -14,18 +14,20 @@ website:
       - about.qmd
     right:
       - icon: github
-        href: http://github.com/paul-kimani/Journey-to-becoming-a-Statistical-Prophet  # Update to your actual repo URL
+        href: http://github.com/paul-kimani/Journey-to-becoming-a-Statistical-Prophet
   sidebar:
-    style: "docked"  # Optional: Adds a collapsible sidebar for subpages
+    style: "docked"
 
 format:
   html:
     theme:
-      - cosmo
-      - brand  # Nice combo—cosmo for clean base, brand for subtle accents
+      - litera # Clean, modern Bootstrap theme
     css: styles.css
     toc: true
     code-fold: true
     execute:
-      echo: true  # Show R code
-      warning: false  # Hide warnings for polished look
+      echo: true
+      warning: false
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Fira+Mono&display=swap">
