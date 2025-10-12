@@ -20,11 +20,9 @@ Start with a humble oracle: Behold, 10,000 whispers from the normal distribution
 ```{r normal-prophecy}
 # Seed for reproducible revelations
 set.seed(42)
-
 # Summon the normals
 n_draws <- 10000
 normals <- rnorm(n_draws, mean = 0, sd = 1)
-
 # Divine the histogram
 hist(normals, 
      main = "The Bell's Eternal Whisper: 10,000 Normal Revelations", 
@@ -33,3 +31,6 @@ hist(normals,
      col = "steelblue", 
      breaks = 50,
      border = "white")
+box()
+
+```

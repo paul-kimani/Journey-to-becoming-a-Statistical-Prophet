@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -209,9 +244,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#greetings-seeker-of-patterns" id="toc-greetings-seeker-of-patterns" class="nav-link active" data-scroll-target="#greetings-seeker-of-patterns">Greetings, Seeker of Patterns</a></li>
-  <li><a href="#seed-for-reproducible-revelations" id="toc-seed-for-reproducible-revelations" class="nav-link" data-scroll-target="#seed-for-reproducible-revelations">Seed for reproducible revelations</a></li>
-  <li><a href="#summon-the-normals" id="toc-summon-the-normals" class="nav-link" data-scroll-target="#summon-the-normals">Summon the normals</a></li>
-  <li><a href="#divine-the-histogram" id="toc-divine-the-histogram" class="nav-link" data-scroll-target="#divine-the-histogram">Divine the histogram</a></li>
   </ul>
 </nav>
     </div>
@@ -242,18 +274,32 @@ window.Quarto = {
 <p>In the vast chaos of data, lies the power to foresee. This site chronicles my odyssey from novice code-wrangler to oracle of odds—armed with R, simulations, and a healthy dose of humility.</p>
 <p>Expect: - <strong>Simulations</strong>: Monte Carlo rituals to summon distributions from the void. - <strong>Prophecies</strong>: Bayesian divinations and time-series auguries. - <strong>Reflections</strong>: Lessons etched in code and charts.</p>
 <p>Start with a humble oracle: Behold, 10,000 whispers from the normal distribution, revealing the bell’s eternal curve.</p>
-</section>
-<section id="seed-for-reproducible-revelations" class="level1">
-<h1>Seed for reproducible revelations</h1>
-<p>set.seed(42)</p>
-</section>
-<section id="summon-the-normals" class="level1">
-<h1>Summon the normals</h1>
-<p>n_draws &lt;- 10000 normals &lt;- rnorm(n_draws, mean = 0, sd = 1)</p>
-</section>
-<section id="divine-the-histogram" class="level1">
-<h1>Divine the histogram</h1>
-<p>hist(normals, main = “The Bell’s Eternal Whisper: 10,000 Normal Revelations”, xlab = “Realm of Values”, ylab = “Echoes of Frequency”, col = “steelblue”, breaks = 50, border = “white”)</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Seed for reproducible revelations</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Summon the normals</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>n_draws <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>normals <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n_draws, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Divine the histogram</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(normals, </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"The Bell's Eternal Whisper: 10,000 Normal Revelations"</span>, </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Realm of Values"</span>, </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Echoes of Frequency"</span>, </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"steelblue"</span>, </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks =</span> <span class="dv">50</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"white"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">box</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/normal-prophecy-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 
