@@ -1,0 +1,28 @@
+---
+title: "Bayesian Divination: Updating Beliefs with Data"
+author: "Paul Mwaniki Kimani"
+format: html
+editor: visual
+---
+
+---
+title: "Bayesian Divination: Updating Beliefs with Data"
+---
+
+## The Prior's Whisper
+
+In Bayesian lore, we start with a hunch (prior) and let data refine it (posterior). Behold a simple coin-flip oracle using rstanarm.
+
+\`\`\`{r bayes-coin, echo=TRUE, message=FALSE} \# Load the arcane library (install if needed: install.packages("rstanarm")) library(rstanarm)
+
+<!-- # Simulated flips: 7 heads in 10 tosses -->
+
+data \<- list(y = c(rep(1,7), rep(0,3))) \# 1=head
+
+# Divination model
+
+model \<- stan_glm(y \~ 1, family = binomial(link = "logit"), data = data, chains = 4, iter = 1000)
+
+# Posterior summary
+
+print(summary(model)) \`\`\`
