@@ -1,0 +1,68 @@
+/* Universal tweaks: Site-wide font and color scheme */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;  /* Serif for that ancient-scroll feel */
+  line-height: 1.7;  /* Breathing room for prophetic prose */
+  color: #2c3e50;  /* Dark slate for readability */
+  background-color: #f8f9fa;  /* Subtle off-white backdrop */
+}
+
+/* Navbar enhancements: Make the stars shine */
+.navbar {
+  background-color: #34495e;  /* Deep blue for cosmic navigation */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Gentle glow */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #ecf0f1 !important;  /* Ethereal white text */
+}
+
+/* Code and R chunks: Highlight the incantations */
+.sourceCode {
+  background-color: #ecf0f1;  /* Light gray altar */
+  border-left: 4px solid #3498db;  /* Blue edge for code divinity */
+  padding-left: 1em;
+  border-radius: 0 4px 4px 0;
+}
+
+.code-output {
+  background-color: #f8f9fa;
+  border: 1px solid #bdc3c7;
+  padding: 0.5em;
+}
+
+/* Plots and tables: Polish the visions */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);  /* Subtle oracle aura */
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Footer flair: Date stamps with a mystic touch */
+small {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Responsive magic: Scales for all seers */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.1em;  /* Bigger text on mobiles */
+  }
+}

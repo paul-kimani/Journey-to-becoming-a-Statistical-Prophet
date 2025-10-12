@@ -1,0 +1,27 @@
+---
+title: "About the Seeker"
+---
+
+## Who Wanders This Path?
+
+I am Paul, a code-tinkering mortal on the quest to unravel data's divine riddles. By day, I wrangle spreadsheets in the mortal coil of [your job/industry]; by night, I commune with R's arcane arts—summoning simulations, divining distributions, and occasionally cursing at convergence warnings.
+
+This digital sanctum? Born from a late-night epiphany: Statistics isn't just numbers; it's prophecy. From humble `rnorm()` incantations to full-blown Bayesian soothsaying, every post here charts my ascent. Inspired by prophets past (Tukey, Fisher) and code gurus (Hadley Wickham, foremost), I share the scrolls: raw code, reproducible rituals, and hard-won revelations.
+
+Why share? To light torches for fellow seekers—whether you're debugging your first GLM or forecasting apocalypses with ARIMA. No gatekeeping; just open-source enlightenment.
+
+```{r stats-wisdom}
+# A humble oracle's table of timeless stats truths
+wisdom <- data.frame(
+  Prophet = c("George Box", "Francis Galton", "Carl Gauss"),
+  Revelation = c(
+    "All models are wrong, but some are useful.",
+    "The universe is under no obligation to make sense to you.",
+    "Error is the discipline through which we advance."
+  ),
+  stringsAsFactors = FALSE
+)
+
+knitr::kable(wisdom, 
+             col.names = c("Sage", "Eternal Truth"),
+             caption = "Whispers from the Stats Ancients")
