@@ -1,0 +1,20 @@
+---
+title: "Random Variable Simulations"
+format: html
+---
+
+## Uniform Distribution
+
+Behold 5000 uniforms—adjust "n" in code for your rituals (static snapshot here).
+
+```{r uniform-sim, echo=TRUE}
+library(ggplot2)
+n_draws <- 5000  # Fixed "slider" value—tweak and re-render!
+set.seed(123)
+uniforms <- runif(n_draws, min = 0, max = 1)
+df <- data.frame(x = uniforms)
+
+ggplot(df, aes(x)) + 
+  geom_histogram(bins = 50, fill = "skyblue", alpha = 0.7) + 
+  labs(title = paste("Uniform Whispers:", n_draws, "Draws"), x = "Value", y = "Count") +
+  theme_minimal()

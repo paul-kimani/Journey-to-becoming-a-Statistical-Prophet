@@ -4,5 +4,11 @@
   },
   "about.qmd": {
     "about.html": "6bbcde4e"
+  },
+  "simulations.qmd": {
+    "simulations.html": "42edf431"
+  },
+  "posts/first-revelation.qmd": {
+    "first-revelation.html": "6ff21d2f"
   }
 }
