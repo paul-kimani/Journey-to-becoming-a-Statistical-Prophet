@@ -4,14 +4,14 @@
     "href": "bayesian-divination.html",
     "title": "Bayesian Divination: Updating Beliefs with Data",
     "section": "",
-    "text": "In Bayesian lore, we start with a hunch (prior) and let data refine it (posterior). Behold a simple coin-flip oracle using rstanarm.\n```{r bayes-coin, echo=TRUE, message=FALSE} # Load the arcane library (install if needed: install.packages(“rstanarm”)) library(rstanarm)\n\ndata &lt;- list(y = c(rep(1,7), rep(0,3))) # 1=head"
+    "text": "In Bayesian lore, we start with a hunch (prior) and let data refine it (posterior).\nBehold a simple coin-flip oracle using rstanarm."
   },
   {
     "objectID": "bayesian-divination.html#the-priors-whisper",
     "href": "bayesian-divination.html#the-priors-whisper",
     "title": "Bayesian Divination: Updating Beliefs with Data",
     "section": "",
-    "text": "In Bayesian lore, we start with a hunch (prior) and let data refine it (posterior). Behold a simple coin-flip oracle using rstanarm.\n```{r bayes-coin, echo=TRUE, message=FALSE} # Load the arcane library (install if needed: install.packages(“rstanarm”)) library(rstanarm)\n\ndata &lt;- list(y = c(rep(1,7), rep(0,3))) # 1=head"
+    "text": "In Bayesian lore, we start with a hunch (prior) and let data refine it (posterior).\nBehold a simple coin-flip oracle using rstanarm."
   },
   {
     "objectID": "index.html",

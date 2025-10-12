@@ -150,6 +150,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#the-priors-whisper" id="toc-the-priors-whisper" class="nav-link active" data-scroll-target="#the-priors-whisper">The Prior’s Whisper</a></li>
+  <li><a href="#load-the-arcane-library-install-if-needed" id="toc-load-the-arcane-library-install-if-needed" class="nav-link" data-scroll-target="#load-the-arcane-library-install-if-needed">Load the arcane library (install if needed)</a></li>
+  <li><a href="#install.packagesrstanarm" id="toc-install.packagesrstanarm" class="nav-link" data-scroll-target="#install.packagesrstanarm">install.packages(“rstanarm”)</a></li>
+  <li><a href="#simulated-flips-7-heads-in-10-tosses" id="toc-simulated-flips-7-heads-in-10-tosses" class="nav-link" data-scroll-target="#simulated-flips-7-heads-in-10-tosses">Simulated flips: 7 heads in 10 tosses</a></li>
   <li><a href="#divination-model" id="toc-divination-model" class="nav-link" data-scroll-target="#divination-model">Divination model</a></li>
   <li><a href="#posterior-summary" id="toc-posterior-summary" class="nav-link" data-scroll-target="#posterior-summary">Posterior summary</a></li>
   </ul>
@@ -185,18 +188,27 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="the-priors-whisper" class="level2">
 <h2 class="anchored" data-anchor-id="the-priors-whisper">The Prior’s Whisper</h2>
-<p>In Bayesian lore, we start with a hunch (prior) and let data refine it (posterior). Behold a simple coin-flip oracle using rstanarm.</p>
-<p>```{r bayes-coin, echo=TRUE, message=FALSE} # Load the arcane library (install if needed: install.packages(“rstanarm”)) library(rstanarm)</p>
-<!-- # Simulated flips: 7 heads in 10 tosses -->
-<p>data &lt;- list(y = c(rep(1,7), rep(0,3))) # 1=head</p>
+<p>In Bayesian lore, we start with a hunch (<em>prior</em>) and let data refine it (<em>posterior</em>).<br>
+Behold a simple coin-flip oracle using <strong>rstanarm</strong>.</p>
+</section>
+<section id="load-the-arcane-library-install-if-needed" class="level1">
+<h1>Load the arcane library (install if needed)</h1>
+</section>
+<section id="install.packagesrstanarm" class="level1">
+<h1>install.packages(“rstanarm”)</h1>
+<p>library(rstanarm)</p>
+</section>
+<section id="simulated-flips-7-heads-in-10-tosses" class="level1">
+<h1>Simulated flips: 7 heads in 10 tosses</h1>
+<p>data &lt;- data.frame(y = c(rep(1,7), rep(0,3))) # 1 = head</p>
 </section>
 <section id="divination-model" class="level1">
 <h1>Divination model</h1>
-<p>model &lt;- stan_glm(y ~ 1, family = binomial(link = “logit”), data = data, chains = 4, iter = 1000)</p>
+<p>model &lt;- stan_glm(y ~ 1, family = binomial(link = “logit”), data = data)</p>
 </section>
 <section id="posterior-summary" class="level1">
 <h1>Posterior summary</h1>
-<p>print(summary(model)) ```</p>
+<p>print(model) posterior_interval(model, prob = 0.95)</p>
 
 
 </section>
